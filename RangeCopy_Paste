@@ -1,0 +1,40 @@
+Option Explicit
+Private Sub CommandButton1_Click()
+Dim Region As String
+Dim CellNum As String
+Dim sht As Worksheet
+Dim StartCell As Range
+'This code helps to select the sheetname in combobox by matching the index number to the values _
+in the combobox
+If ComboBox1.ListIndex = -1 Then
+MsgBox "Nothing Selected"
+ElseIf ComboBox1.ListIndex = 0 Then
+Region = ComboBox1.Value
+ElseIf ComboBox1.ListIndex = 1 Then
+Region = ComboBox1.ListIndex.Value
+ElseIf ComboBox1.ListIndex = 2 Then
+Region = ComboBox1.ListIndex.Value
+ElseIf ComboBox1.ListIndex = 3 Then
+Region = ComboBox1.ListIndex.Value
+ElseIf ComboBox1.ListIndex = 4 Then
+Region = ComboBox1.ListIndex.Value
+End If
+'This line assigns the textbox value to a variable with string data type
+CellNum = TextBox1.Value
+Set sht = Worksheets(Region)
+Set StartCell = Range(CellNum)
+
+'Select Range with respect to the Cell address
+  StartCell.CurrentRegion.Select
+End Sub
+
+Private Sub UserForm_Initialize()
+'When the form is initialized the for next statement loops through entire workbook and loads sheetnames in combobox
+Dim ws As Worksheet, wb As Workbook
+
+Set wb = ActiveWorkbook
+
+For Each ws In wb.Worksheets
+ComboBox1.AddItem ws.Name
+Next
+End Sub
