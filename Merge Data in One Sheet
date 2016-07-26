@@ -1,0 +1,251 @@
+Sub Macro1()
+'
+' Macro1 Macro
+'
+' Keyboard Shortcut: Ctrl+e
+'
+Dim erow As Long, lastrow As Long, lastcolumn As Long
+Dim WS As Worksheet
+Dim i As Long
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\AP HYDERABAD.xlsx"
+Worksheets("RBM HYDERABAD").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'AP KURNOOL
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\AP KURNOOL.xlsx"
+Worksheets("RBM KURNOOL").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "AP KURNOOL"
+Worksheets("AP KURNOOL").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'BIHAR
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\BIHAR.xlsx"
+Worksheets("EXCLUDING LIPIFOL").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "BIHAR"
+Worksheets("BIHAR").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'DELHI (C+N+W)
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\DELHI (C+N+W).xlsx"
+Worksheets("Sheet1").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "DELHI(C+N+W)"
+Worksheets("DELHI(C+N+W)").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'DELHI(S+E)
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\DELHI (S+E).xlsx"
+Worksheets("EXCLUDING LIPIFOL").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "DELHI (S+E)"
+Worksheets("DELHI (S+E)").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+
+'GUJRAT
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\GUJARAT.xlsx"
+Worksheets("EXCLUDING LIPIFOL").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "GUJRAT"
+Worksheets("GUJRAT").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+
+'JHARKHAND
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\JHARKHAND.xlsx"
+Worksheets("EXCLUDING LIPIFOL").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "JHARKHAND"
+Worksheets("JHARKHAND").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'KARN BANGLORE
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\KARN BANGALORE.xlsx"
+Worksheets("Sheet1").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "KARN BANGALORE"
+Worksheets("KARN BANGALORE").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'KARN HUBLI
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\KARN HUBLI.xlsx"
+Worksheets("Sheet1").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "KARN HUBLI"
+Worksheets("KARN HUBLI").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'KERLA
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\KERALA.xlsx"
+Worksheets("SHEET 1").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "KERALA"
+Worksheets("KERALA").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+'MAH PUNE
+
+Workbooks.Open Filename:="F:\MANISHA\2016-17\PROJECTION SATISH\PROJECTION CELLAGE 2016-17\MAH PUNE.xlsx"
+Worksheets("EXCLLIPIFOL to consider").Activate
+lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row
+Range("A3:R" & lastrow).Select
+Selection.Copy
+lastcolumn = ActiveSheet.Cells(1, Columns.Count).End(xlToLeft).Column
+ActiveWorkbook.Close
+
+Sheets.Add.Name = "MAH PUNE"
+Worksheets("MAH PUNE").Activate
+erow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Offset(3, 0).Row
+Cells(erow, 1).Select
+ActiveSheet.Paste
+Set Rng = Range(Cells(erow, 1), Cells(lastrow, "R"))
+With Rng.Borders
+.LineStyle = xlContinuous
+.Color = vbBlack
+.Weight = xlThin
+End With
+
+End Sub
