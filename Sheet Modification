@@ -1,0 +1,16 @@
+Sub Macro5()
+'
+' Macro5 Macro
+'
+' Keyboard Shortcut: Ctrl+u
+'
+Dim sheetname As String
+sheetname = ActiveSheet.Name
+Columns("B:S").EntireColumn.Hidden = False
+Rows("34:41").EntireRow.Insert
+Worksheets(sheetname).Range("C6:H33").ClearContents
+Worksheets(sheetname).Range("A6:b33").ClearContents
+Sheets("HYDRABAD").Range("A6:B41").Copy Destination:=Sheets(sheetname).Range("A6")
+Sheets("HYDRABAD").Range("j2:Ab41").Copy Destination:=Sheets(sheetname).Range("j2")
+Rows("42").Delete
+End Sub
