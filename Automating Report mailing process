@@ -1,0 +1,349 @@
+Option Explicit
+
+Sub ZM_SM()
+'
+' ZM_SM Macro
+'
+Dim OutApp As Object
+Dim OutMail As Object
+Application.ScreenUpdating = False
+'NORTH ZONE
+'-----------------------------------------------------------------------------------------------------------------
+Workbooks.Add
+ActiveWorkbook.SaveAs Filename:="F:\VBA\Sheets\Meyer Organics\NORTH_ZONE.xlsx"
+ActiveSheet.Name = "PRIMARY"
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A3:Q455").Copy
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Range("B2").Select
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1712:Q1759").Copy
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Range("B456").Select
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Range("B456").PasteSpecial Paste:=xlPasteValues
+Workbooks("NORTH_ZONE.xlsx").Worksheets("PRIMARY").Range("B456").PasteSpecial Paste:=xlPasteFormats
+Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = "SECONDARY"
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A3:Q455").Copy
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Range("B2").Select
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2016-17.xlsx").Activate
+ActiveSheet.Range("A1712:Q1759").Copy
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Range("B456").Select
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Range("B456").PasteSpecial Paste:=xlPasteValues
+Workbooks("NORTH_ZONE.xlsx").Worksheets("SECONDARY").Range("B456").PasteSpecial Paste:=xlPasteFormats
+Workbooks("NORTH_ZONE.xlsx").Close
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+On Error Resume Next
+With OutMail
+.to = "vjha@meyer.co.in;mktg3@meyer.co.in"
+.CC = ""
+.BCC = ""
+.Subject = "This is the Subject line"
+.Body = "Hi there"
+.Attachments.Add ("F:\VBA\Sheets\Meyer Organics\NORTH_ZONE.xlsx")
+End With
+On Error GoTo 0
+Set OutMail = Nothing
+Set OutApp = Nothing
+'UP_COMBINE
+'----------------------------------------------------------------------------------------------------
+Workbooks.Add
+ActiveWorkbook.SaveAs Filename:="F:\VBA\Sheets\Meyer Organics\UP_COMBINE.xlsx"
+ActiveSheet.Name = "PRIMARY"
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A105:Q304").Copy
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Range("B2").Select
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1762:Q1809").Copy
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Range("B203").Select
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Range("B203").PasteSpecial Paste:=xlPasteValues
+Workbooks("UP_COMBINE.xlsx").Worksheets("PRIMARY").Range("B203").PasteSpecial Paste:=xlPasteFormats
+Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = "SECONDARY"
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A105:Q304").Copy
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Range("B2").Select
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1762:Q1809").Copy
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Range("B203").Select
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Range("B203").PasteSpecial Paste:=xlPasteValues
+Workbooks("UP_COMBINE.xlsx").Worksheets("SECONDARY").Range("B203").PasteSpecial Paste:=xlPasteFormats
+Workbooks("UP_COMBINE.xlsx").Close
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+On Error Resume Next
+With OutMail
+.to = "vjha@meyer.co.in;mktg3@meyer.co.in"
+.CC = ""
+.BCC = ""
+.Subject = "This is the Subject line"
+.Body = "Hi there"
+.Attachments.Add ("F:\VBA\Sheets\Meyer Organics\UP_COMBINE.xlsx")
+End With
+On Error GoTo 0
+Set OutMail = Nothing
+Set OutApp = Nothing
+'DELHI& RAJASTHAN
+'---------------------------------------------------------------------------------------------------------------
+Workbooks.Add
+ActiveWorkbook.SaveAs Filename:="F:\VBA\Sheets\Meyer Organics\DELHI&RAJASTHAN.xlsx"
+ActiveSheet.Name = "PRIMARY"
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A3:Q101").Copy
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B2").Select
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A408:Q455").Copy
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B102").Select
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B102").PasteSpecial Paste:=xlPasteValues
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B102").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1812:Q1859").Copy
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B151").Select
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B151").PasteSpecial Paste:=xlPasteValues
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("PRIMARY").Range("B151").PasteSpecial Paste:=xlPasteFormats
+Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = "SECONDARY"
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A3:Q101").Copy
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B2").Select
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A408:Q455").Copy
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B102").Select
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B102").PasteSpecial Paste:=xlPasteValues
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B102").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1812:Q1859").Copy
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B151").Select
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B151").PasteSpecial Paste:=xlPasteValues
+Workbooks("DELHI&RAJASTHAN.xlsx").Worksheets("SECONDARY").Range("B151").PasteSpecial Paste:=xlPasteFormats
+Workbooks("DELHI&RAJASTHAN.xlsx").Close
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+On Error Resume Next
+With OutMail
+.to = "vjha@meyer.co.in;mktg3@meyer.co.in"
+.CC = ""
+.BCC = ""
+.Subject = "This is the Subject line"
+.Body = "Hi there"
+.Attachments.Add ("F:\VBA\Sheets\Meyer Organics\DELHI&RAJASTHAN.xlsx")
+End With
+On Error GoTo 0
+Set OutMail = Nothing
+Set OutApp = Nothing
+'WB_COMBINE
+'----------------------------------------------------------------------------------------------------------------
+Workbooks.Add
+ActiveWorkbook.SaveAs Filename:="F:\VBA\Sheets\Meyer Organics\WB_COMBINE.xlsx"
+ActiveSheet.Name = "PRIMARY"
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A458:Q605").Copy
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Range("B2").Select
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1912:Q1959").Copy
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Range("B151").Select
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Range("B151").PasteSpecial Paste:=xlPasteValues
+Workbooks("WB_COMBINE.xlsx").Worksheets("PRIMARY").Range("B151").PasteSpecial Paste:=xlPasteFormats
+Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = "SECONDARY"
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A458:Q605").Copy
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Range("B2").Select
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1912:Q1959").Copy
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Range("B151").Select
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Range("B151").PasteSpecial Paste:=xlPasteValues
+Workbooks("WB_COMBINE.xlsx").Worksheets("SECONDARY").Range("B151").PasteSpecial Paste:=xlPasteFormats
+Workbooks("WB_COMBINE.xlsx").Close SaveChanges:=True
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+On Error Resume Next
+With OutMail
+.to = "vjha@meyer.co.in;mktg3@meyer.co.in"
+.CC = ""
+.BCC = ""
+.Subject = "This is the Subject line"
+.Body = "Hi there"
+.Attachments.Add ("F:\VBA\Sheets\Meyer Organics\WB_COMBINE.xlsx")
+End With
+On Error GoTo 0
+Set OutMail = Nothing
+Set OutApp = Nothing
+'BIHAR -JHARKHAND - ORISSA
+'------------------------------------------------------------------------------------------------------
+Workbooks.Add
+ActiveWorkbook.SaveAs Filename:="F:\VBA\Sheets\Meyer Organics\BIHAR_JHRKHAND_ORISSA.xlsx"
+ActiveSheet.Name = "PRIMARY"
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A608:Q755").Copy
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Range("B2").Select
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A2217:Q2264").Copy
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Range("B151").Select
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Range("B151").PasteSpecial Paste:=xlPasteValues
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("PRIMARY").Range("B151").PasteSpecial Paste:=xlPasteFormats
+Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = "SECONDARY"
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A608:Q755").Copy
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Range("B2").Select
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A2217:Q2264").Copy
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Range("B151").Select
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Range("B151").PasteSpecial Paste:=xlPasteValues
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Worksheets("SECONDARY").Range("B151").PasteSpecial Paste:=xlPasteFormats
+Workbooks("BIHAR_JHRKHAND_ORISSA.xlsx").Close SaveChanges:=True
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+On Error Resume Next
+With OutMail
+.to = "vjha@meyer.co.in;mktg3@meyer.co.in"
+.CC = ""
+.BCC = ""
+.Subject = "This is the Subject line"
+.Body = "Hi there"
+.Attachments.Add ("F:\VBA\Sheets\Meyer Organics\BIHAR_JHRKHAND_ORISSA.xlsx")
+End With
+On Error GoTo 0
+Set OutMail = Nothing
+Set OutApp = Nothing
+'Andhra Pradesh
+'--------------------------------------------------------------------------------------------------------------------
+Workbooks.Add
+ActiveWorkbook.SaveAs Filename:="F:\VBA\Sheets\Meyer Organics\AP1&2.xlsx"
+ActiveSheet.Name = "PRIMARY"
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A808:Q905").Copy
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Range("B2").Select
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1923:Q1969").Copy
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Range("B101").Select
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Range("B101").PasteSpecial Paste:=xlPasteValues
+Workbooks("AP1&2.xlsx").Worksheets("PRIMARY").Range("B101").PasteSpecial Paste:=xlPasteFormats
+Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = "SECONDARY"
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A792:Q887").Copy
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Range("B2").Select
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2017-18.xlsx").Activate
+ActiveSheet.Range("A1923:Q1969").Copy
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Range("B101").Select
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Range("B101").PasteSpecial Paste:=xlPasteValues
+Workbooks("AP1&2.xlsx").Worksheets("SECONDARY").Range("B101").PasteSpecial Paste:=xlPasteFormats
+ Workbooks("AP1&2.xlsx").Close SaveChanges:=True
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+On Error Resume Next
+With OutMail
+.to = "vjha@meyer.co.in;mktg3@meyer.co.in"
+.CC = ""
+.BCC = ""
+.Subject = "This is the Subject line"
+.Body = "Hi there"
+.Attachments.Add ("F:\VBA\Sheets\Meyer Organics\NORTH_ZONE.xlsx")
+End With
+On Error GoTo 0
+Set OutMail = Nothing
+Set OutApp = Nothing
+
+'TN1&2 Karn1,2&3
+
+Workbooks.Add
+ActiveWorkbook.SaveAs Filename:="F:\VBA\Sheets\Meyer Organics\TN&Karnataka.xlsx"
+ActiveSheet.Name = "PRIMARY"
+Workbooks("PRIMARY 2016-17.xlsx").Activate
+ActiveSheet.Range("A890:Q1133").Copy
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Range("B2").Select
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("PRIMARY 2016-17.xlsx").Activate
+ActiveSheet.Range("A1973:Q2019").Copy
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Activate
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Range("B247").Select
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Range("B247").PasteSpecial Paste:=xlPasteValues
+Workbooks("TN&Karnataka.xlsx").Worksheets("PRIMARY").Range("B247").PasteSpecial Paste:=xlPasteFormats
+Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = "SECONDARY"
+Workbooks("SECONDRY 2016-17.xlsx").Activate
+ActiveSheet.Range("A890:Q1133").Copy
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Range("B2").Select
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteValues
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Range("B2").PasteSpecial Paste:=xlPasteFormats
+Workbooks("SECONDRY 2016-17.xlsx").Activate
+ActiveSheet.Range("A1973:Q2019").Copy
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Activate
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Range("B247").Select
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Range("B247").PasteSpecial Paste:=xlPasteValues
+Workbooks("TN&Karnataka.xlsx").Worksheets("SECONDARY").Range("B247").PasteSpecial Paste:=xlPasteFormats
+Workbooks("TN&Karnataka.xlsx").Save
+Workbooks("TN&Karnataka.xlsx").Close
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+On Error Resume Next
+With OutMail
+.to = "vjha@meyer.co.in;mktg3@meyer.co.in"
+.CC = ""
+.BCC = ""
+.Subject = "This is the Subject line"
+.Body = "Hi there"
+.Send
+.Attachments.Add ("F:\VBA\Sheets\Meyer Organics\NORTH_ZONE.xlsx")
+End With
+On Error GoTo 0
+Set OutMail = Nothing
+Set OutApp = Nothing
+
+Application.ScreenUpdating = False
+End Sub
